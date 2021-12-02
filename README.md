@@ -2,3 +2,10 @@
 P_Réseau DEV - Cahier des charges 3
 
 ERP (Enterprise Resource Planning) en C#.
+
+## Matériel :
+> Visual studio 2019 pour C# win forms
+> 
+> Base de donnée en mysql
+> 
+> architecture MVC
