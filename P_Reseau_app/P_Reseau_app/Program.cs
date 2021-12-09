@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace P_Reseau_app
@@ -18,6 +20,9 @@ namespace P_Reseau_app
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
+
+
         }
     }
+
 }
