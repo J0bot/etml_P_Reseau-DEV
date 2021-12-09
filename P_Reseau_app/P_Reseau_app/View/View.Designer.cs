@@ -1,6 +1,6 @@
 ﻿namespace P_Reseau_app
 {
-    partial class Form1
+    partial class View
     {
         /// <summary>
         /// Variable nécessaire au concepteur.

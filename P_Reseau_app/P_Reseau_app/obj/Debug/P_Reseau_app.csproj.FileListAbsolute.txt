@@ -30,4 +30,4 @@ C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau
 C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.csproj.CopyComplete
 C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.exe
 C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.pdb
-C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.Form1.resources
+C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.View.resources

@@ -11,15 +11,13 @@ using MySql.Data.MySqlClient;
 
 namespace P_Reseau_app
 {
-    public partial class Form1 : Form
+    public partial class View : Form
     {
-        public Form1()
+        public View()
         {
             InitializeComponent();
 
-
-            System.Diagnostics.Debug.WriteLine("shit");
-            var conn = Database.Instance();
+            Database conn = new Database();
 
             //TOuT METTRE çA DANS UN FICHIER .JSON
             conn.Server = "172.20.10.5";
@@ -28,6 +26,17 @@ namespace P_Reseau_app
             conn.Password = ".Etml123";
             if (conn.IsConnect())
             {
+                List<string[]> regions = conn.GetRegions();
+                foreach (string[] region in regions)
+                {
+                    foreach (string item in region)
+                    {
+                        debugLabel1.Text += item;
+
+                    }
+                }
+
+                /*
                 //suppose col0 and col1 are defined as VARCHAR in the DB
                 string query = "SELECT * FROM regions GROUP BY region_name";
                 var cmd = new MySqlCommand(query, conn.Connection);
@@ -39,7 +48,7 @@ namespace P_Reseau_app
                     debugLabel1.Text = someStringFromColumnZero + "," + someStringFromColumnOne;
                     //System.Diagnostics.Debug.WriteLine(someStringFromColumnZero + "," + someStringFromColumnOne);
 
-                }
+                }*/
                 conn.Close();
             }
         }

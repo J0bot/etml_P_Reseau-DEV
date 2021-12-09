@@ -5450,3 +5450,22 @@
 3410.4014: supR3HardenedDllNotificationCallback: Unload 00007ffaa1960000 LB 0x00064000 C:\Windows\System32\PlayToDevice.dll [flags=0x0]
 3410.4014: supR3HardenedDllNotificationCallback: Unload 00007ffabd600000 LB 0x0000c000 C:\Windows\System32\fdWNet.dll [flags=0x0]
 3410.4014: supR3HardenedDllNotificationCallback: Unload 00007ffab0480000 LB 0x0001d000 C:\Windows\System32\ATL.DLL [flags=0x0]
+3410.1704: supR3HardenedDllNotificationCallback: Unload 00007ffab3c80000 LB 0x0000d000 C:\Program Files\Oracle\VirtualBox\VBoxGuestPropSvc.DLL [flags=0x0]
+3410.35a0: supR3HardenedDllNotificationCallback: Unload 00007ffab3de0000 LB 0x0000c000 C:\Program Files\Oracle\VirtualBox\VBoxGuestControlSvc.DLL [flags=0x0]
+3410.3890: supR3HardenedDllNotificationCallback: Unload 00007ffab3410000 LB 0x00014000 C:\Program Files\Oracle\VirtualBox\VBoxSharedFolders.DLL [flags=0x0]
+3410.2604: supR3HardenedDllNotificationCallback: Unload 00007ffab7d20000 LB 0x0000d000 C:\Program Files\Oracle\VirtualBox\VBoxDragAndDropSvc.DLL [flags=0x0]
+3410.b04: supR3HardenedDllNotificationCallback: Unload 00007ffabcff0000 LB 0x00010000 C:\Program Files\Oracle\VirtualBox\VBoxSharedClipboard.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffab3c90000 LB 0x00019000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxUsbWebcamR3.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffab5170000 LB 0x00018000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxUsbCardReaderR3.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffab7b90000 LB 0x00012000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxNvmeR3.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffab7bc0000 LB 0x00018000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxEhciR3.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffab19f0000 LB 0x00041000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxHostWebcam.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffa651d0000 LB 0x00a03000 C:\Program Files\Oracle\VirtualBox\VBoxDD.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffa9a2f0000 LB 0x00066000 C:\Program Files\Oracle\VirtualBox\VBoxDDU.dll [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffa62d80000 LB 0x0085c000 C:\Program Files\Oracle\VirtualBox\VBoxDD2.dll [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffac9540000 LB 0x0003b000 C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL [flags=0x0]
+3410.3ae4: supR3HardenedDllNotificationCallback: Unload 00007ffacac30000 LB 0x00008000 C:\WINDOWS\System32\NSI.dll [flags=0x0]
+3410.53c: supR3HardenedDllNotificationCallback: Unload 00007ffabd5a0000 LB 0x0000e000 C:\Program Files\Oracle\VirtualBox\ExtensionPacks\Oracle_VM_VirtualBox_Extension_Pack\win.amd64\VBoxPuelMainVM.DLL [flags=0x0]
+3410.53c: Terminating the normal way: rcExit=0
+3a5c.1b34: supR3HardNtChildWaitFor[2]: Quitting: ExitCode=0x0 (rcNtWait=0x0, rcNt1=0x0, rcNt2=0x103, rcNt3=0x103, 6642868 ms, the end);
+395c.3a20: supR3HardNtChildWaitFor[1]: Quitting: ExitCode=0x0 (rcNtWait=0x0, rcNt1=0x0, rcNt2=0x103, rcNt3=0x103, 6643301 ms, the end);

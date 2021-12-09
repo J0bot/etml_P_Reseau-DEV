@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.16-windows">
-  <Machine uuid="{45088cf4-dcdd-453d-8c0f-d6a8fc122163}" name="Turnkey MYSQL" OSType="Linux_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T13:17:09Z">
+  <Machine uuid="{45088cf4-dcdd-453d-8c0f-d6a8fc122163}" name="Turnkey MYSQL" OSType="Linux_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T15:27:57Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{3e198a1f-a154-42ed-bc73-0fab1e8801d3}" location="Turnkey MYSQL.vdi" format="VDI" type="Normal"/>
@@ -17,7 +17,7 @@
     </MediaRegistry>
     <ExtraData>
       <ExtraDataItem name="GUI/LastCloseAction" value="PowerOff"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="604,200,800,642"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="2289,176,800,642"/>
     </ExtraData>
     <Hardware>
       <CPU>
@@ -52,7 +52,7 @@
       <RTC localOrUTC="UTC"/>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639053079997180500" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639055829177545300" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>

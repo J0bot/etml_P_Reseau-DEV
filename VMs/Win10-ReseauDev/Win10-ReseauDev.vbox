@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.15-windows">
-  <Machine uuid="{bcb85299-42e1-4bd5-a3c4-8b06dcdccff8}" name="Win10-ReseauDev" OSType="Windows10_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T13:37:30Z">
+  <Machine uuid="{bcb85299-42e1-4bd5-a3c4-8b06dcdccff8}" name="Win10-ReseauDev" OSType="Windows10_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T15:28:08Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{6ef99c8e-f110-4d0b-b67f-44a73b93666f}" location="Win10-ReseauDev.vdi" format="VDI" type="Normal"/>
@@ -18,7 +18,7 @@
     </MediaRegistry>
     <ExtraData>
       <ExtraDataItem name="GUI/LastGuestSizeHint" value="1920,975"/>
-      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="0,23,1920,1017,max"/>
+      <ExtraDataItem name="GUI/LastNormalWindowPosition" value="1920,23,1920,1017,max"/>
     </ExtraData>
     <Hardware>
       <CPU count="3">
@@ -68,22 +68,9 @@
         <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="145957" timestamp="1639057066406582806" flags=""/>
         <GuestProperty name="/VirtualBox/GuestAdd/Version" value="6.1.26" timestamp="1639057066406582804" flags=""/>
         <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="6.1.26" timestamp="1639057066406582805" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/MAC" value="0800274353F0" timestamp="1639057068770563304" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Status" value="Up" timestamp="1639057068770563303" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Broadcast" value="255.255.255.255" timestamp="1639057068770563301" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/IP" value="172.20.10.11" timestamp="1639057068770563300" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Netmask" value="255.255.255.0" timestamp="1639057068770563302" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/Net/Count" value="1" timestamp="1639057394771477100" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsers" value="1" timestamp="1639057068769587302" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/LoggedInUsersList" value="admin" timestamp="1639057068769587301" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/NoLoggedInUsers" value="false" timestamp="1639057068769587303" flags="TRANSIENT, TRANSRESET"/>
         <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Windows 10" timestamp="1639057066406582800" flags=""/>
         <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="10.0.19044" timestamp="1639057066406582801" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/User/admin@DESKTOP-KO3E643/UsageState" value="Idle" timestamp="1639057374660619100" flags="TRANSIENT, TRANSRESET"/>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639057399461827400" flags="RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxRev" value="145957" timestamp="1639057050695218702" flags="TRANSIENT, RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxVer" value="6.1.26" timestamp="1639057050695218700" flags="TRANSIENT, RDONLYGUEST"/>
-        <GuestProperty name="/VirtualBox/HostInfo/VBoxVerExt" value="6.1.26" timestamp="1639057050695218701" flags="TRANSIENT, RDONLYGUEST"/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639063688517644000" flags=""/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>

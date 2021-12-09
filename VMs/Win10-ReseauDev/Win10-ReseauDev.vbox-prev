@@ -6,7 +6,7 @@
 ** Use VBoxManage or the VirtualBox Manager GUI to make changes.
 -->
 <VirtualBox xmlns="http://www.virtualbox.org/" version="1.15-windows">
-  <Machine uuid="{bcb85299-42e1-4bd5-a3c4-8b06dcdccff8}" name="Win10-ReseauDev" OSType="Windows10_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T13:17:25Z">
+  <Machine uuid="{bcb85299-42e1-4bd5-a3c4-8b06dcdccff8}" name="Win10-ReseauDev" OSType="Windows10_64" snapshotFolder="Snapshots" lastStateChange="2021-12-09T15:28:08Z">
     <MediaRegistry>
       <HardDisks>
         <HardDisk uuid="{6ef99c8e-f110-4d0b-b67f-44a73b93666f}" location="Win10-ReseauDev.vdi" format="VDI" type="Normal"/>
@@ -50,24 +50,33 @@
         </Adapter>
       </Network>
       <AudioAdapter controller="HDA" driver="DirectSound" enabled="true" enabledIn="false"/>
+      <SharedFolders>
+        <SharedFolder name="bin" hostPath="C:\Users\pi36qwj\Documents\GitHubDesktop\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\bin" writable="true" autoMount="true"/>
+      </SharedFolders>
       <Clipboard/>
       <GuestProperties>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxControl.exe" value="6.1.26r145957" timestamp="1639055327910013800" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxGuest.sys" value="6.1.26r145957" timestamp="1639055327929536600" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxHook.dll" value="6.1.26r145957" timestamp="1639055327912945300" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxMRXNP.dll" value="6.1.26r145957" timestamp="1639055327926609400" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxMouse.sys" value="6.1.26r145957" timestamp="1639055327930485600" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxSF.sys" value="6.1.26r145957" timestamp="1639055327931461400" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxService.exe" value="6.1.26r145957" timestamp="1639055327919750001" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxTray.exe" value="6.1.26r145957" timestamp="1639055327919750000" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/HostVerLastChecked" value="6.1.26" timestamp="1639055365018798600" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/InstallDir" value="C:/Program Files/Oracle/VirtualBox Guest Additions" timestamp="1639055327904134502" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="145957" timestamp="1639055327904134501" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/Version" value="6.1.26" timestamp="1639055327903182604" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="6.1.26" timestamp="1639055327904134500" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Windows 10" timestamp="1639055327903182600" flags=""/>
-        <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="10.0.19044" timestamp="1639055327903182601" flags=""/>
-        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639055845522402000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxControl.exe" value="6.1.26r145957" timestamp="1639057066409042700" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxGuest.sys" value="6.1.26r145957" timestamp="1639057066413921600" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxHook.dll" value="6.1.26r145957" timestamp="1639057066410018400" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxMRXNP.dll" value="6.1.26r145957" timestamp="1639057066412946500" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxMouse.sys" value="6.1.26r145957" timestamp="1639057066413921601" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxSF.sys" value="6.1.26r145957" timestamp="1639057066414898900" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxService.exe" value="6.1.26r145957" timestamp="1639057066411970500" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Components/VBoxTray.exe" value="6.1.26r145957" timestamp="1639057066410996100" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/HostVerLastChecked" value="6.1.26" timestamp="1639057094718641000" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/InstallDir" value="C:/Program Files/Oracle/VirtualBox Guest Additions" timestamp="1639057066406582807" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Revision" value="145957" timestamp="1639057066406582806" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/Version" value="6.1.26" timestamp="1639057066406582804" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestAdd/VersionExt" value="6.1.26" timestamp="1639057066406582805" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/MAC" value="0800274353F0" timestamp="1639057068770563304" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/Status" value="Up" timestamp="1639057068770563303" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Broadcast" value="255.255.255.255" timestamp="1639057068770563301" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/IP" value="172.20.10.11" timestamp="1639057068770563300" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/0/V4/Netmask" value="255.255.255.0" timestamp="1639057068770563302" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/Net/Count" value="1" timestamp="1639062137328254600" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/Product" value="Windows 10" timestamp="1639057066406582800" flags=""/>
+        <GuestProperty name="/VirtualBox/GuestInfo/OS/Release" value="10.0.19044" timestamp="1639057066406582801" flags=""/>
+        <GuestProperty name="/VirtualBox/HostInfo/GUI/LanguageID" value="fr_FR" timestamp="1639062141857200800" flags="RDONLYGUEST"/>
       </GuestProperties>
     </Hardware>
     <StorageControllers>
