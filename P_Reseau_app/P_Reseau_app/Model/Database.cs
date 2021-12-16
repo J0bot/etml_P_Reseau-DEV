@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data;
 using MySql.Data.MySqlClient;
-using System.Linq;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace P_Reseau_app
 {
@@ -13,7 +10,15 @@ namespace P_Reseau_app
     {
         public Database()
         {
-
+            using (StreamReader r = new StreamReader("Model/config.json"))
+            {
+                string json = r.ReadToEnd();
+                ConfItems item = JsonConvert.DeserializeObject<ConfItems>(json);
+                this.Server = item.Server;
+                this.DatabaseName = item.DatabaseName;
+                this.UserName = item.UserName;
+                this.Password = item.Password;
+            }
         }
 
         public Database(string server, string databaseName, string userName, string password)
@@ -24,10 +29,10 @@ namespace P_Reseau_app
             this.Password = password;
         }
 
-        public string Server { get; set; }
-        public string DatabaseName { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
+        private string Server { get; set; }
+        private string DatabaseName { get; set; }
+        private string UserName { get; set; }
+        private string Password { get; set; }
 
         private MySqlConnection Connection { get; set; }
 
@@ -50,9 +55,13 @@ namespace P_Reseau_app
             Connection.Close();
         }
 
+        /// <summary>
+        /// Retourne les region
+        /// </summary>
+        /// <returns>Les régions dans ce format : List<string[region_id,region_name]></returns>
         public List<string[]> GetRegions()
         {
-            string query = "SELECT * FROM regions";
+            string query = "SELECT region_id , region_name FROM regions";
             MySqlCommand cmd = new MySqlCommand(query, this.Connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             List<string[]> data = new List<string[]>();
@@ -72,6 +81,16 @@ namespace P_Reseau_app
             }
             return data;
         }
+
+        public void AddRegion(string name)
+        {
+            string query = "INSERT INTO regions SET region_name=\""+name+"\";";
+            new MySqlCommand(query, this.Connection);
+            MySqlCommand cmd = new MySqlCommand(query, this.Connection);
+            cmd.ExecuteReader();
+        }
+
+
 
     }
 }

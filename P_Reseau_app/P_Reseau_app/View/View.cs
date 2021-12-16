@@ -19,11 +19,11 @@ namespace P_Reseau_app
 
             Database conn = new Database();
 
-            //TOuT METTRE çA DANS UN FICHIER .JSON
-            conn.Server = "172.20.10.5";
-            conn.DatabaseName = "db_employees";
-            conn.UserName = "remote";
-            conn.Password = ".Etml123";
+            ////TOuT METTRE çA DANS UN FICHIER .JSON
+            //conn.Server = "172.20.10.5";
+            //conn.DatabaseName = "db_employees";
+            //conn.UserName = "remote";
+            //conn.Password = ".Etml123";
             if (conn.IsConnect())
             {
                 List<string[]> regions = conn.GetRegions();
@@ -51,6 +51,22 @@ namespace P_Reseau_app
                 }*/
                 conn.Close();
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Database conn = new Database();
+            //conn.Server = "172.20.10.5";
+            //conn.DatabaseName = "db_employees";
+            //conn.UserName = "remote";
+            //conn.Password = ".Etml123";
+            if (conn.IsConnect())
+            {
+                debugLabel1.Text += this.textBox1.Text;
+                conn.AddRegion(this.textBox1.Text);
+            }
+
+
         }
     }
 }
