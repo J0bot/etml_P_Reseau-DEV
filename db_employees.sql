@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS db_employees;
+
 CREATE DATABASE IF NOT EXISTS db_employees;
 
 USE db_employees;
@@ -22,11 +24,12 @@ CREATE TABLE IF NOT EXISTS countries
 (
 country_id CHAR(2) NOT NULL,
 country_name VARCHAR(40),
-region_id INT NOT NULL,
+region_id INT UNSIGNED NOT NULL,
 PRIMARY KEY(country_id)
 );
 
 CREATE TABLE IF NOT EXISTS locations
+(
 location_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 street_address VARCHAR(40),
 postal_code VARCHAR(12),
@@ -40,8 +43,7 @@ CREATE TABLE IF NOT EXISTS departments
 (
 department_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 department_name VARCHAR(30) NOT NULL,
-manager_id INT,
-location_id INT,
+location_id INT UNSIGNED,
 PRIMARY KEY(department_id)
 );
 
@@ -56,33 +58,32 @@ hire_date DATE NOT NULL,
 job_id VARCHAR(10) NOT NULL,
 salary DECIMAL(8,2) NOT NULL,
 commission_pct DECIMAL(2,2),
-manager_id INT,
-department_id INT,
+department_id INT UNSIGNED,
 PRIMARY KEY(employee_id)
 );
 
 CREATE TABLE IF NOT EXISTS job_history
 (
-employee_id INT NOT NULL,
+employee_id INT UNSIGNED NOT NULL,
 start_date DATE NOT NULL,
 end_date DATE NOT NULL,
 job_id VARCHAR(10) NOT NULL,
-department_id INT NOT NULL,
-PRIMARY KEY(employee_id, job_id)
+department_id INT UNSIGNED NOT NULL,
+PRIMARY KEY(employee_id, job_id, department_id)
 );
 
-ALTER TABLE `countries` ADD CONSTRAINT `region_fk` FOREIGN KEY (`region_id`) REFERENCES `regions`(`region_id`) ON DELETE CASCADE ON UPDATE CASCADE;
- 
-ALTER TABLE `locations` ADD CONSTRAINT `country_fk` FOREIGN KEY (`country_id`) REFERENCES `country`(`country_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `countries` ADD CONSTRAINT `cou_region_fk` FOREIGN KEY (`region_id`) REFERENCES `regions`(`region_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `departments` ADD CONSTRAINT `location_fk` FOREIGN KEY (`location_id`) REFERENCES `locations`(`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `locations` ADD CONSTRAINT `loc_country_fk` FOREIGN KEY (`country_id`) REFERENCES `countries`(`country_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `employees` ADD CONSTRAINT `job_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs`(`job_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `departments` ADD CONSTRAINT `dep_location_fk` FOREIGN KEY (`location_id`) REFERENCES `locations`(`location_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `employees` ADD CONSTRAINT `department_fk` FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `employees` ADD CONSTRAINT `emp_job_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs`(`job_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `job_history` ADD CONSTRAINT `employee_fk` FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `employees` ADD CONSTRAINT `emp_department_fk` FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `job_history` ADD CONSTRAINT `job_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs`(`job_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `job_history` ADD CONSTRAINT `jhist_employee_fk` FOREIGN KEY (`employee_id`) REFERENCES `employees`(`employee_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
-ALTER TABLE `job_history` ADD CONSTRAINT `department_fk` FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `job_history` ADD CONSTRAINT `jhist_job_fk` FOREIGN KEY (`job_id`) REFERENCES `jobs`(`job_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `job_history` ADD CONSTRAINT `jhist_department_fk` FOREIGN KEY (`department_id`) REFERENCES `departments`(`department_id`) ON DELETE CASCADE ON UPDATE CASCADE;
