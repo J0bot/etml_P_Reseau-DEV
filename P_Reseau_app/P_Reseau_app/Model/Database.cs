@@ -111,7 +111,7 @@ namespace P_Reseau_app
         /// <param name="name"></param>
         public void AddRegion(string regionName)
         {
-            string query = string.Format("INSERT INTO regions SET region_name=\"{0}\";",regionName );
+            string query = $"INSERT INTO regions SET region_name=\"{regionName}\";";
             ExecuteQuerySimple(query);
         }
 
@@ -123,7 +123,7 @@ namespace P_Reseau_app
 
         public void AddCountry(string countryName, int RegionId)
         {
-            string query = string.Format("INSERT INTO countries SET country_name=\"{0}\", region_id=\"{1}\";",countryName,RegionId);
+            string query = $"INSERT INTO countries SET country_name=\"{countryName}\", region_id=\"{RegionId}\";";
             ExecuteQuerySimple(query);
         }
 
@@ -133,9 +133,10 @@ namespace P_Reseau_app
             return ExecuteQueryList(query);
         }
 
-        public void AddDepartment()
+        public void AddDepartment(string departmentName, int locationId)
         {
-
+            string query = $"INSERT INTO departments SET department_name=\"{departmentName}\", location_id=\"{locationId}\";";
+            ExecuteQuerySimple(query);
         }
 
         public List<string[]> GetEmployees()
@@ -144,9 +145,10 @@ namespace P_Reseau_app
             return ExecuteQueryList(query);
         }
 
-        public void AddEmployee()
+        public void AddEmployee(string firstName, string lastName, string email, string phoneNumber, string hireDate, int jobId, double salary, double commissionPct, int departmentId)
         {
-
+            string query = $"INSERT INTO employees SET first_name=\"{firstName}\", last_name=\"{lastName}\", email=\"{2}\", phone_number=\"{3}\", hire_date=\"{1}\", job_id=\"{1}\", salary=\"{1}\", commission_pct=\"{1}\", department_id=\"{1}\";";
+            ExecuteQuerySimple(query);
         }
 
         public List<string[]> GetJobs()

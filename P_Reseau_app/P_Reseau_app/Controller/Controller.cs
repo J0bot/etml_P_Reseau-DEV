@@ -29,9 +29,12 @@ namespace P_Reseau_app
             }
         }
 
-        public void checkRegion()
+        public void checkRegion(string region)
         {
-            
+            if(region!="")
+            {
+                db.AddRegion(region);
+            }
         }
 
         public void DisplayRegions()

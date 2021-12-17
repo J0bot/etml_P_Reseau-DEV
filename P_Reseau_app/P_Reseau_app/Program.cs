@@ -20,7 +20,6 @@ namespace P_Reseau_app
             Application.SetCompatibleTextRenderingDefault(false);
             Controller controller = new Controller(new View());
             Application.Run(controller.view);
-
         }
     }
 

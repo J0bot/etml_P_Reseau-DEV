@@ -38,7 +38,6 @@ namespace P_Reseau_app
                 foreach (string item in region)
                 {
                     debugLabel1.Text += item;
-
                 }
             }
         }
