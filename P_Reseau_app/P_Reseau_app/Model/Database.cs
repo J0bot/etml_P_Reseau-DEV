@@ -56,12 +56,12 @@ namespace P_Reseau_app
         }
 
         /// <summary>
-        /// Retourne les region
+        /// Execute une query qui va retourner des données
         /// </summary>
-        /// <returns>Les régions dans ce format : List<string[region_id,region_name]></returns>
-        public List<string[]> GetRegions()
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public List<string[]> ExecuteQueryList(string query)
         {
-            string query = "SELECT region_id , region_name FROM regions";
             MySqlCommand cmd = new MySqlCommand(query, this.Connection);
             MySqlDataReader reader = cmd.ExecuteReader();
             List<string[]> data = new List<string[]>();
@@ -74,23 +74,112 @@ namespace P_Reseau_app
                 for (int i = 0; i < rowCount; i++)
                 {
                     rowData[i] = reader.GetString(i);
-                   // data[lineCount,i]= reader.GetString(i);
+                    // data[lineCount,i]= reader.GetString(i);
                 }
 
                 data.Add(rowData);
             }
+            reader.Close();
             return data;
         }
 
-        public void AddRegion(string name)
+        /// <summary>
+        /// Execute une query simple sans return;
+        /// </summary>
+        /// <param name="query"></param>
+        public void ExecuteQuerySimple(string query)
         {
-            string query = "INSERT INTO regions SET region_name=\""+name+"\";";
-            new MySqlCommand(query, this.Connection);
             MySqlCommand cmd = new MySqlCommand(query, this.Connection);
             cmd.ExecuteReader();
+            
         }
 
 
+        /// <summary>
+        /// Retourne les region
+        /// </summary>
+        /// <returns>Les régions dans ce format : List<string[region_id,region_name]></returns>
+        public List<string[]> GetRegions()
+        {
+            string query = "SELECT region_id ,region_name FROM regions";
+            return ExecuteQueryList(query);
+        }
 
+        /// <summary>
+        /// Ajoute des régions
+        /// </summary>
+        /// <param name="name"></param>
+        public void AddRegion(string regionName)
+        {
+            string query = string.Format("INSERT INTO regions SET region_name=\"{0}\";",regionName );
+            ExecuteQuerySimple(query);
+        }
+
+        public List<string[]> GetCountries()
+        {
+            string query = "SELECT country_id, country_name ,region_id FROM countries";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddCountry(string countryName, int RegionId)
+        {
+            string query = string.Format("INSERT INTO countries SET country_name=\"{0}\", region_id=\"{1}\";",countryName,RegionId);
+            ExecuteQuerySimple(query);
+        }
+
+        public List<string[]> GetDeparments()
+        {
+            string query = "SELECT department_id ,department_name,location_id FROM departments";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddDepartment()
+        {
+
+        }
+
+        public List<string[]> GetEmployees()
+        {
+            string query = "SELECT employee_id ,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,department_id FROM employees";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddEmployee()
+        {
+
+        }
+
+        public List<string[]> GetJobs()
+        {
+            string query = "SELECT job_id ,job_title,min_salary,max_salary FROM jobs";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddJob()
+        {
+
+        }
+
+        public List<string[]> GetJob_history()
+        {
+            string query = "SELECT employee_id ,start_date,end_date,job_id,department_id FROM job_history";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddJob_history()
+        {
+
+        }
+
+        public List<string[]> GetLocations()
+        {
+            string query = "SELECT location_id ,street_address,postal_code,city,state_province,country_id FROM locations";
+            return ExecuteQueryList(query);
+        }
+
+        public void AddLocation()
+        {
+
+        }
     }
 }

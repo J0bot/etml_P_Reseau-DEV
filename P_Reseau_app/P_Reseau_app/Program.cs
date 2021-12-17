@@ -18,9 +18,8 @@ namespace P_Reseau_app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View());
-
-
+            Controller controller = new Controller(new View());
+            Application.Run(controller.view);
 
         }
     }

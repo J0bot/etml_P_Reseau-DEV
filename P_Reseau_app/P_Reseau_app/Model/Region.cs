@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P_Reseau_app.Model
+namespace P_Reseau_app
 {
-    public class Region
+    public struct Region
     {
         public int ID { get; set; }
         public int Title { get; set; }
     }
+
 }
