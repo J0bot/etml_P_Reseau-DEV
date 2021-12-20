@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P_Reseau_app", "P_Reseau_app\P_Reseau_app.csproj", "{B1C77D8D-C1B8-4532-B5A3-ABFB6953FC88}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupPojr", "SetupPojr\SetupPojr.vdproj", "{523DE53E-060B-4FCC-8553-A970BC1BCE0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +15,6 @@ Global
 		{B1C77D8D-C1B8-4532-B5A3-ABFB6953FC88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1C77D8D-C1B8-4532-B5A3-ABFB6953FC88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1C77D8D-C1B8-4532-B5A3-ABFB6953FC88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{523DE53E-060B-4FCC-8553-A970BC1BCE0F}.Debug|Any CPU.ActiveCfg = Debug
-		{523DE53E-060B-4FCC-8553-A970BC1BCE0F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
