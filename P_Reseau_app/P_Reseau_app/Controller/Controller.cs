@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace P_Reseau_app
+﻿namespace P_Reseau_app
 {
     public class Controller
     {
-        public View view;
+        public View view { get; }
         private Database db;
 
         private bool connected;
@@ -19,19 +13,19 @@ namespace P_Reseau_app
             view.controller = this;
             db = new Database();
             connected = db.IsConnect();
-            if(connected==false)
+            if (connected == false)
             {
-                view.DisplayError("AYYYYYY");
+                view.DisplayError("La connection à la db a échoué");
             }
             else
             {
-                view.DisplayError("oklm");
+                view.DisplayError("Tout fonctionne bien");
             }
         }
 
         public void checkRegion(string region)
         {
-            if(region!="")
+            if (region != "")
             {
                 db.AddRegion(region);
             }
@@ -42,6 +36,10 @@ namespace P_Reseau_app
             view.DisplayRegions(db.GetRegions());
         }
 
+        public void DisplayLocations()
+        {
+            view.DisplayLocations(db.GetLocations());
+        }
 
 
     }

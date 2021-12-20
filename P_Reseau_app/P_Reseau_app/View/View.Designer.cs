@@ -32,6 +32,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.labelStreetAddress = new System.Windows.Forms.Label();
+            this.labelCity = new System.Windows.Forms.Label();
+            this.labelCountryName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // debugLabel1
@@ -69,11 +72,41 @@
             this.errorLabel.TabIndex = 3;
             this.errorLabel.Text = "error ?";
             // 
+            // labelStreetAddress
+            // 
+            this.labelStreetAddress.AutoSize = true;
+            this.labelStreetAddress.Location = new System.Drawing.Point(376, 64);
+            this.labelStreetAddress.Name = "labelStreetAddress";
+            this.labelStreetAddress.Size = new System.Drawing.Size(35, 13);
+            this.labelStreetAddress.TabIndex = 4;
+            this.labelStreetAddress.Text = "label1";
+            // 
+            // labelCity
+            // 
+            this.labelCity.AutoSize = true;
+            this.labelCity.Location = new System.Drawing.Point(483, 64);
+            this.labelCity.Name = "labelCity";
+            this.labelCity.Size = new System.Drawing.Size(35, 13);
+            this.labelCity.TabIndex = 5;
+            this.labelCity.Text = "label2";
+            // 
+            // labelCountryName
+            // 
+            this.labelCountryName.AutoSize = true;
+            this.labelCountryName.Location = new System.Drawing.Point(595, 64);
+            this.labelCountryName.Name = "labelCountryName";
+            this.labelCountryName.Size = new System.Drawing.Size(35, 13);
+            this.labelCountryName.TabIndex = 6;
+            this.labelCountryName.Text = "label3";
+            // 
             // View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelCountryName);
+            this.Controls.Add(this.labelCity);
+            this.Controls.Add(this.labelStreetAddress);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -91,6 +124,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label labelStreetAddress;
+        private System.Windows.Forms.Label labelCity;
+        private System.Windows.Forms.Label labelCountryName;
     }
 }
 
