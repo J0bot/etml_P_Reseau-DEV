@@ -13,7 +13,7 @@ PRIMARY KEY(region_id)
 
 CREATE TABLE IF NOT EXISTS jobs
 (
-job_id VARCHAR(10) NOT NULL,
+job_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 job_title VARCHAR(35) NOT NULL,
 min_salary DECIMAL(8,0),
 max_salary DECIMAL(8,0),
@@ -55,7 +55,7 @@ last_name VARCHAR(25) NOT NULL,
 email VARCHAR(25) NOT NULL,
 phone_number VARCHAR(20),
 hire_date DATE NOT NULL,
-job_id VARCHAR(10) NOT NULL,
+job_id INT UNSIGNED NOT NULL,
 salary DECIMAL(8,2) NOT NULL,
 commission_pct DECIMAL(2,2),
 department_id INT UNSIGNED,
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS job_history
 employee_id INT UNSIGNED NOT NULL,
 start_date DATE NOT NULL,
 end_date DATE NOT NULL,
-job_id VARCHAR(10) NOT NULL,
+job_id INT UNSIGNED NOT NULL,
 department_id INT UNSIGNED NOT NULL,
 PRIMARY KEY(employee_id, job_id, department_id)
 );
