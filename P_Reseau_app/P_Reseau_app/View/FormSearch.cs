@@ -68,17 +68,17 @@ namespace P_Reseau_app
             dataGridView.Columns[3].Name = "email";
             dataGridView.Columns[4].Name = "phone_number";
             dataGridView.Columns[5].Name = "hire_date";
-            dataGridView.Columns[6].Name = "job_id";
+            dataGridView.Columns[6].Name = "job_title";
             dataGridView.Columns[7].Name = "salary";
             dataGridView.Columns[8].Name = "commission_pct";
-            dataGridView.Columns[9].Name = "department_id";
+            dataGridView.Columns[9].Name = "department_name";
+            dataGridView.Columns[9].Width = 150;
             dataGridView.Columns[10].Name = "Detail";
             dataGridView.Columns[10].Width = 40;
             dataGridView.Columns[11].Name = "Modify";
             dataGridView.Columns[11].Width = 45;
             dataGridView.Columns[12].Name = "Delete";
             dataGridView.Columns[12].Width = 40;
-
 
             foreach (string[] employee in employees)
             {

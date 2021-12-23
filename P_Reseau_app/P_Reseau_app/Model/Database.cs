@@ -292,7 +292,7 @@ namespace P_Reseau_app
         /// <returns>une liste de strings contenants les infos des employés</returns>
         public List<string[]> GetEmployees()
         {
-            string query = "SELECT employee_id ,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,department_id FROM employees ";
+            string query = "SELECT employee_id ,first_name,last_name,email,phone_number,hire_date,job_title,salary,commission_pct,department_name FROM employees NATURAL JOIN departments NATURAL JOIN jobs ORDER BY employee_id ASC";
             return ExecuteQueryList(query);
         }
 
@@ -338,7 +338,7 @@ namespace P_Reseau_app
         public List<string[]> SearchEmployeeByName(string text)
         {
             string pattern = text + "%";
-            string query = $"SELECT employee_id ,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,department_id FROM employees WHERE first_name LIKE \"{pattern}\"  ORDER BY first_name ASC";
+            string query = $"SELECT employee_id ,first_name,last_name,email,phone_number,hire_date,job_title,salary,commission_pct,department_name FROM employees  NATURAL JOIN departments NATURAL JOIN jobs WHERE first_name LIKE \"{pattern}\"  ORDER BY first_name ASC";
             return ExecuteQueryList(query);
         }
 
