@@ -44,15 +44,6 @@ namespace P_Reseau_app
             }
         }
 
-        public void DisplayRegions()
-        {
-            view.DisplayRegions(db.GetRegions());
-        }
-
-        public void DisplayLocations()
-        {
-            view.DisplayLocations(db.GetLocations());
-        }
 
         public void DisplayFormList(Form form)
         {

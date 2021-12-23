@@ -20,6 +20,7 @@ namespace P_Reseau_app
         public FormList()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             DisplayTable();
         }
 
@@ -59,6 +60,7 @@ namespace P_Reseau_app
                 dataGridView.Rows.Add(employee);
                 
             }
+
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 DataGridViewButtonCell btnDetail = new DataGridViewButtonCell();

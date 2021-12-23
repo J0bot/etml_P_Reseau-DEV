@@ -11,7 +11,6 @@ C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\bin\Debug
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\bin\Debug\System.Buffers.dll
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\bin\Debug\MySql.Data.xml
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\bin\Debug\Newtonsoft.Json.xml
-C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.csprojAssemblyReference.cache
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.View.resources
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.Properties.Resources.resources
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.csproj.GenerateResource.cache

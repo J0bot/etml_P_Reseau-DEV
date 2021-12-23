@@ -15,8 +15,8 @@ namespace P_Reseau_app
         public FormAjouter()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
-
 
     }
 }
