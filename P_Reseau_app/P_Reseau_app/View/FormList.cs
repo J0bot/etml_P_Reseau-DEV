@@ -16,6 +16,7 @@ namespace P_Reseau_app
 
         private DataGridView dataGridView;
 
+
         public FormList()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace P_Reseau_app
 
         public void FillTable(List<string[]> employees)
         {
-            dataGridView.ColumnCount = 11;
+            dataGridView.ColumnCount = 13;
 
             dataGridView.Columns[0].Name = "employee_id";
             dataGridView.Columns[1].Name = "first_name";
@@ -45,15 +46,41 @@ namespace P_Reseau_app
             dataGridView.Columns[7].Name = "salary";
             dataGridView.Columns[8].Name = "commission_pct";
             dataGridView.Columns[9].Name = "department_id";
-            dataGridView.Columns[10].Name = "Options";
+            dataGridView.Columns[10].Name = "Detail";
+            dataGridView.Columns[10].Width = 40;
+            dataGridView.Columns[11].Name = "Modify";
+            dataGridView.Columns[11].Width = 45;
+            dataGridView.Columns[12].Name = "Delete";
+            dataGridView.Columns[12].Width = 40;
+
 
             foreach (string[] employee in employees)
             {
                 dataGridView.Rows.Add(employee);
-
+                
             }
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                DataGridViewButtonCell btnDetail = new DataGridViewButtonCell();
+                DataGridViewButtonCell btnDelete = new DataGridViewButtonCell();
+                DataGridViewButtonCell btnModify = new DataGridViewButtonCell();
+                DataGridViewCellStyle btnStyle = new DataGridViewCellStyle();
+                btnStyle.Font = new Font("Wingdings 2", 10f, FontStyle.Bold);
+                btnDetail.Style = btnStyle;
+                btnDelete.Style = btnStyle;
+                btnModify.Style = btnStyle;
 
+                btnDetail.Value = "2";
+                btnDelete.Value = "3";
+                btnModify.Value = "!";
 
+                
+
+                row.Cells[10] = btnDetail;
+                row.Cells[11] = btnModify;
+                row.Cells[12] = btnDelete;
+                
+            }
         }
 
         private void ListeToolStripMenuItem_Click(object sender, EventArgs e)
