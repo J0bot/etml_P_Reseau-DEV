@@ -49,5 +49,16 @@ namespace P_Reseau_app
                 labelCountryName.Text += location[6] + "\n";
             }
         }
+
+        private void ListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.DisplayFormList(this);
+        }
+
+        private void RechercherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controller.DisplayFormSearch(this);
+
+        }
     }
 }

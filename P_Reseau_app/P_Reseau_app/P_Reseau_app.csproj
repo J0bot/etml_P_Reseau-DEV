@@ -110,6 +110,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAjouter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAjouter.Designer.cs">
+      <DependentUpon>FormAjouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormList.Designer.cs">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\ConfItems.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="Model\Database.cs" />
@@ -123,6 +141,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="View\FormAjouter.resx">
+      <DependentUpon>FormAjouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormList.resx">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\View.resx">
       <DependentUpon>View.cs</DependentUpon>
     </EmbeddedResource>

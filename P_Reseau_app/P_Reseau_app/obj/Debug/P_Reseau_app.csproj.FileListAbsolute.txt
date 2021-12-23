@@ -21,3 +21,6 @@ C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.csproj.CopyComplete
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.exe
 C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.pdb
+C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.FormAjouter.resources
+C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.FormList.resources
+C:\Users\px01evl\Documents\etml_P_Reseau-DEV\P_Reseau_app\P_Reseau_app\obj\Debug\P_Reseau_app.FormSearch.resources
